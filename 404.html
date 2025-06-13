@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting…</title>
     <script>
-      // Only redirect if we haven't already done so
-      if (!sessionStorage.redirectedFrom404) {
-        sessionStorage.redirectedFrom404 = "true";
-        const redirectPath = "/auto-stats" + location.pathname + location.search + location.hash;
-        window.location.replace(redirectPath);
-      }
+      // GitHub Pages routing fallback
+      (function () {
+        var path = window.location.pathname;
+        var redirect = "/auto-stats" + path.replace(/^\/auto-stats/, "");
+        window.location.replace(redirect);
+      })();
     </script>
   </head>
   <body>
-    <p>Redirecting...</p>
+    Redirecting…
   </body>
 </html>
-
-
-
 
