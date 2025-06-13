@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <title>Redirecting…</title>
     <script>
-      // GitHub Pages routing fallback
       (function () {
-        var path = window.location.pathname;
-        var redirect = "/auto-stats" + path.replace(/^\/auto-stats/, "");
-        window.location.replace(redirect);
+        var redirectTo = '/auto-stats' + location.pathname.replace(/^\/auto-stats/, '');
+        window.location.replace(redirectTo);
       })();
     </script>
   </head>
