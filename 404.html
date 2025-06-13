@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting…</title>
-  <meta http-equiv="refresh" content="0; URL=/auto-stats/" />
-  <script>
-    // Optional JS fallback
-    const redirectPath = '/auto-stats' + location.pathname + location.search + location.hash;
-    sessionStorage.redirectedFrom404 = true;
-    location.replace(redirectPath);
-  </script>
-</head>
-<body>
-  <p>Redirecting to <code>/auto-stats</code>…</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <script>
+      // Only redirect if we haven't already done so
+      if (!sessionStorage.redirectedFrom404) {
+        sessionStorage.redirectedFrom404 = "true";
+        const redirectPath = "/auto-stats" + location.pathname + location.search + location.hash;
+        window.location.replace(redirectPath);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
 
