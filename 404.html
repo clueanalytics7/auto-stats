@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <title>Redirecting…</title>
     <script>
-      (function () {
-        var redirectTo = '/auto-stats' + location.pathname.replace(/^\/auto-stats/, '');
-        window.location.replace(redirectTo);
-      })();
+      // Strip "/auto-stats" if it’s doubled or messed up
+      const currentPath = window.location.pathname.replace(/^\/auto-stats\/?/, '');
+      const redirectTo = '/auto-stats/#/' + currentPath + window.location.search + window.location.hash;
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body>
