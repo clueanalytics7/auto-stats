@@ -1,12 +1,19 @@
-# React + Vite
+# AutoStats Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Demo](public/demo.gif) <!-- Add a screen recording later -->
 
-Currently, two official plugins are available:
+Automated statistical analysis and visualization tool for researchers, analysts, and data enthusiasts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- 🚀 **Client-side processing** (No data leaves your browser)
+- 📊 **Multi-chart dashboard** with grid layout
+- 🔍 **Smart data detection** (Numeric/categorical)
+- 🤖 **AI-assisted insights** (Clue Agent)
 
-## Expanding the ESLint configuration
+## Try It
+[![Open in GitHub Pages](https://img.shields.io/badge/Launch-GitHub%20Pages-blue?logo=github)](https://yourusername.github.io/auto-stats)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development
+```bash
+npm install
+npm run dev
