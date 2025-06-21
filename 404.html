@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>404 - Page Not Found | EdgeChart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | EdgeChart</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
       body {
@@ -43,18 +43,19 @@
       }
     </style>
     <script>
-      // Redirect to the correct base path
-      const basePath = '/edgechart/';
-      const currentPath = window.location.pathname + window.location.search + window.location.hash;
-      
-      // Remove leading slashes and prepend base path if not already present
-      if (!currentPath.startsWith(basePath)) {
-        const cleanPath = currentPath.replace(/^\/+/, '');
-        window.location.replace(basePath + cleanPath);
-      } else if (currentPath === '/edgechart/404.html') {
-        // Fallback: redirect to home if stuck on 404
-        window.location.replace(basePath);
-      }
+      (function () {
+        const basePath = '/edgechart/';
+        const currentPath = window.location.pathname + window.location.search + window.location.hash;
+        
+        // Redirect to base path if not already there
+        if (!currentPath.startsWith(basePath)) {
+          const cleanPath = currentPath.replace(/^\/+/, '');
+          window.location.replace(basePath + cleanPath);
+        } else if (currentPath.includes('/404.html') || currentPath === '/') {
+          // Prevent infinite loops or redirect from root
+          window.location.replace(basePath);
+        }
+      })();
     </script>
   </head>
   <body>
