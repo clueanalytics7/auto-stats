@@ -4,14 +4,23 @@
     <meta charset="UTF-8" />
     <title>Redirecting…</title>
     <script>
-      // Strip "/auto-stats" if it’s doubled or messed up
-      const currentPath = window.location.pathname.replace(/^\/auto-stats\/?/, '');
-      const redirectTo = '/auto-stats/#/' + currentPath + window.location.search + window.location.hash;
-      window.location.replace(redirectTo);
+      // Check if we're at the wrong path
+      const repoName = 'edgechart'; // Match your repo name
+      const correctBase = `/${repoName}/`;
+      
+      // If not already at the correct base path, redirect
+      if (!window.location.pathname.startsWith(correctBase)) {
+        const newPath = correctBase + window.location.pathname.replace(/^\/+/, '');
+        window.location.replace(newPath + window.location.search + window.location.hash);
+      }
+      // If we're here but still showing 404, redirect to home
+      else {
+        window.location.replace(correctBase);
+      }
     </script>
   </head>
   <body>
-    Redirecting…
+    Redirecting to correct page...
   </body>
 </html>
 
