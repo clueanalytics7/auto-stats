@@ -42,13 +42,10 @@ export default function Privacy() {
           <li>Request access to any data we may have about you</li>
           <li>Request correction or deletion of your data</li>
           <li>Withdraw consent for data processing</li>
-        </ul>
-        <p>
-          To exercise these rights, please contact us at{' '}
-          <a href="mailto:clueanalytics7@gmail.com" className="text-blue-600 hover:underline">
-            clueanalytics7@gmail.com
-          </a>.
-        </p>
+        </ul> 
+          <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 transition-colors">
+            To exercise these rights or enquiries, visit our <a href="/contact" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">Contact Us</a> page. 
+        </p> 
       </section>
     </div>
   );

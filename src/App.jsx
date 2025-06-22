@@ -68,7 +68,7 @@ export default function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    initGA('G-XXXXXXXXXX');
+    initGA('G-98SPL77FT1');
     logPageView();
   }, []);
 
@@ -94,7 +94,8 @@ export default function App() {
   };
 
   return (
-    <Router>
+    // <Router>
+    <Router basename="/edgechart">
       <div className="min-h-screen bg-gray-50 flex flex-col">
         <Navbar />
         <CookieConsent />
@@ -104,7 +105,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={
               <>
-                <h1 className="text-2xl font-bold text-gray-800 mb-3">AutoStats Dashboard</h1>
+                <h1 className="text-2xl font-bold text-gray-800 mb-3">EdgeChart Dashboard</h1>
                 <DataAnalysisPage 
                   tableData={tableData}
                   isLoading={isLoading}

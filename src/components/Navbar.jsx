@@ -17,13 +17,13 @@ export default function Navbar() {
               to="/dashboard"
               className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium text-gray-500 hover:text-gray-700"
             >
-              <FiBarChart2 className="mr-1" /> AutoStats Dashboard
+              <FiBarChart2 className="mr-1" /> EdgeDashboard
             </Link>
             <Link
               to="/agent"
               className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium text-gray-500 hover:text-gray-700"
             >
-              <FiMessageSquare className="mr-1" /> Clue Agent
+              <FiMessageSquare className="mr-1" /> EdgeAgent
             </Link>
           </div>
         </div>
@@ -31,3 +31,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

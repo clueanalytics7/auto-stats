@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to AutoStats</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to EdgeChart</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Powerful data visualization and analysis tool for your CSV files
+          Powerful data visualisation and analysis tool for your CSV files
         </p>
         <div className="mt-8">
           <Link
@@ -28,7 +28,7 @@ export default function Home() {
               <svg className="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span>Interactive data visualization with multiple chart types</span>
+              <span>Interactive data visualisation with multiple chart types</span>
             </li>
             <li className="flex items-start">
               <svg className="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,10 +66,10 @@ export default function Home() {
               1. Upload your CSV file using our simple drag-and-drop interface
             </p>
             <p>
-              2. Select the visualization types you want to create
+              2. Select the visualisation types you want to create
             </p>
             <p>
-              3. Customize your charts with our intuitive controls
+              3. Customise your charts with our intuitive controls
             </p>
             <p>
               4. Export or save your results
